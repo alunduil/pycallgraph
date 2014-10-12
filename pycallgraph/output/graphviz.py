@@ -148,7 +148,7 @@ class GraphvizOutput(Output):
 
     def attrs_from_dict(self, d):
         output = []
-        for attr, val in d.iteritems():
+        for attr, val in d.items():
             output.append('%s = "%s"' % (attr, val))
         return ', '.join(output)
 
@@ -164,7 +164,7 @@ class GraphvizOutput(Output):
 
     def generate_attributes(self):
         output = []
-        for section, attrs in self.graph_attributes.iteritems():
+        for section, attrs in self.graph_attributes.items():
             output.append('{} [ {} ];'.format(
                 section, self.attrs_from_dict(attrs),
             ))
